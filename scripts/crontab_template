@@ -1,0 +1,55 @@
+# AI Employee - Silver Tier Crontab Configuration
+# ================================================
+# Install: crontab /path/to/crontab_template
+# View: crontab -l
+# Edit: crontab -e
+
+# Environment Setup
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin
+MAILTO=""
+
+# Project Paths (UPDATE THESE)
+PROJECT_DIR=/mnt/c/Users/Fozia/Hackhton0/Bronze-tier
+PYTHON=/usr/bin/python3
+LOG_DIR=/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Logs
+
+# ================================================
+# WATCHERS - Continuous Monitoring
+# ================================================
+
+# Filesystem Watcher - Check every minute
+* * * * * cd $PROJECT_DIR && $PYTHON filesystem_watcher.py --once >> $LOG_DIR/filesystem.log 2>&1
+
+# Gmail Watcher - Check every 5 minutes
+*/5 * * * * cd $PROJECT_DIR && $PYTHON watchers/gmail_watcher.py --once --simulate >> $LOG_DIR/gmail.log 2>&1
+
+# Approval Watcher - Check every 3 minutes
+*/3 * * * * cd $PROJECT_DIR && $PYTHON watchers/approval_watcher.py --once >> $LOG_DIR/approval.log 2>&1
+
+# ================================================
+# SCHEDULED TASKS - Time-based Operations
+# ================================================
+
+# Morning Briefing - Daily at 8:00 AM
+0 8 * * * cd $PROJECT_DIR && $PYTHON scripts/daily_briefing.py >> $LOG_DIR/briefing.log 2>&1
+
+# Plan Creator - Run every 30 minutes
+*/30 * * * * cd $PROJECT_DIR && $PYTHON scripts/plan_creator.py >> $LOG_DIR/planning.log 2>&1
+
+# LinkedIn Scheduled Post - Weekdays at 10:00 AM
+0 10 * * 1-5 cd $PROJECT_DIR && $PYTHON scripts/linkedin_scheduler.py >> $LOG_DIR/linkedin.log 2>&1
+
+# ================================================
+# MAINTENANCE - System Health
+# ================================================
+
+# Log Rotation - Daily at midnight
+0 0 * * * find $LOG_DIR -name "*.log" -mtime +7 -delete
+
+# Health Check - Every 15 minutes
+*/15 * * * * cd $PROJECT_DIR && $PYTHON scripts/health_check.py >> $LOG_DIR/health.log 2>&1
+
+# ================================================
+# END OF CRONTAB
+# ================================================

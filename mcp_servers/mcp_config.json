@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "email-mcp": {
+      "command": "python3",
+      "args": ["/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/mcp_servers/email_server.py"],
+      "env": {
+        "MCP_SIMULATION": "true",
+        "GMAIL_CREDENTIALS_PATH": ""
+      }
+    }
+  }
+}
