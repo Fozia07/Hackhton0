@@ -1,0 +1,18 @@
+{
+  "primary_goal": "Increase product awareness and drive signups",
+  "target_audience": "Young developers and tech startups",
+  "tone": "Professional but engaging and approachable",
+  "weekly_focus": "AI automation tools for productivity",
+  "brand_voice": "innovative and helpful",
+  "key_messages": [
+    "AI Employee automates your daily tasks",
+    "Focus on what matters - let AI handle the rest",
+    "Enterprise-grade automation for everyone"
+  ],
+  "avoid_topics": [
+    "competitor comparisons",
+    "pricing details",
+    "unreleased features"
+  ],
+  "cta_preference": "moderate"
+}

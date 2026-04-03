@@ -1,0 +1,40 @@
+{
+  "agent_id": "local",
+  "agent_type": "local",
+  "is_active": true,
+  "description": "Local Agent - runs on user's machine, handles approvals and final actions",
+  "owned_zones": [
+    "email_send",
+    "social_post",
+    "approvals",
+    "whatsapp",
+    "payments",
+    "odoo_write",
+    "accounting",
+    "ceo_briefing",
+    "dashboard_write",
+    "general"
+  ],
+  "draft_only_zones": [],
+  "read_only_zones": [
+    "email_triage",
+    "social_draft"
+  ],
+  "permissions": {
+    "can_send_email": true,
+    "can_post_social": true,
+    "can_make_payment": true,
+    "can_approve": true,
+    "can_write_dashboard": true,
+    "can_access_whatsapp": true,
+    "can_write_odoo": true
+  },
+  "settings": {
+    "auto_merge_updates": true,
+    "heartbeat_interval_seconds": 60,
+    "signal_check_interval_seconds": 30,
+    "max_tasks_per_cycle": 10
+  },
+  "created_at": "2026-03-25T00:00:00Z",
+  "version": "1.0.0"
+}

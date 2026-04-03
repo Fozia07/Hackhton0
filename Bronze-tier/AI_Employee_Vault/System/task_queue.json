@@ -1,0 +1,653 @@
+{
+  "tasks": [
+    {
+      "id": "demo_health_001",
+      "type": "system_health_check",
+      "title": "System Health Check",
+      "description": "Verify all system components are operational",
+      "status": "completed",
+      "priority": 2,
+      "created_at": "2026-03-05T08:46:32.896898",
+      "updated_at": "2026-03-05T08:46:32.976712",
+      "started_at": "2026-03-05T08:46:32.976708",
+      "completed_at": "2026-03-05T08:46:33.003427",
+      "steps": [],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [],
+      "blocks": [],
+      "result": {
+        "success": true,
+        "health_report": {
+          "timestamp": "2026-03-05T08:46:32.988406",
+          "checks": [
+            {
+              "name": "Directory: Approved",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Approved"
+            },
+            {
+              "name": "Directory: Done",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Done"
+            },
+            {
+              "name": "Directory: Drafts",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Drafts"
+            },
+            {
+              "name": "Directory: Executive",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive"
+            },
+            {
+              "name": "Directory: Logs",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Logs"
+            },
+            {
+              "name": "Directory: System",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/System"
+            },
+            {
+              "name": "Script: social_media_orchestrator.py",
+              "status": "ok"
+            },
+            {
+              "name": "Script: social_campaign_engine.py",
+              "status": "ok"
+            },
+            {
+              "name": "Script: weekly_ceo_briefing.py",
+              "status": "ok"
+            }
+          ],
+          "overall_status": "healthy"
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "id": "demo_audit_001",
+      "type": "accounting_audit",
+      "title": "Weekly Accounting Audit",
+      "description": "Generate accounting audit report",
+      "status": "completed",
+      "priority": 3,
+      "created_at": "2026-03-05T08:46:32.896934",
+      "updated_at": "2026-03-05T08:46:33.516011",
+      "started_at": "2026-03-05T08:46:33.516004",
+      "completed_at": "2026-03-05T08:48:01.902531",
+      "steps": [],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [
+        "demo_health_001"
+      ],
+      "blocks": [],
+      "result": {
+        "success": true,
+        "stdout": "\n=== Generating Weekly Accounting Audit ===\n\nAudit generated successfully!\nSaved to: /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/accounting_audit_20260305.md\n\n--- Executive Summary ---\nCash Position: $173,500.00\nWeekly Cash Flow: $26,000.00\nYTD Profit Margin: 61.1%\n\n--- Risks Identified ---\n  [MEDIUM] Receivables: $5,200.00 overdue from 1 invoices\n",
+        "stderr": "2026-03-05 08:48:01,845 - odoo_mcp_server - INFO - Connected to Odoo (SIMULATION MODE)\n2026-03-05 08:48:01,887 - odoo_mcp_server - INFO - Audit saved to /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/accounting_audit_20260305.md\n"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "demo_ceo_001",
+      "type": "ceo_briefing",
+      "title": "CEO Weekly Briefing",
+      "description": "Generate comprehensive CEO briefing",
+      "status": "completed",
+      "priority": 3,
+      "created_at": "2026-03-05T08:46:32.896942",
+      "updated_at": "2026-03-05T08:48:02.456811",
+      "started_at": "2026-03-05T08:48:02.456806",
+      "completed_at": "2026-03-05T08:48:02.908367",
+      "steps": [],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [
+        "demo_audit_001"
+      ],
+      "blocks": [],
+      "result": {
+        "success": true,
+        "stdout": "\n============================================================\n      WEEKLY CEO BRIEFING GENERATOR\n      Gold Tier - AI Employee System\n============================================================\n\nBriefing saved to: /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/ceo_briefing_20260305.md\n\n============================================================\n      Briefing Generation Complete\n============================================================\n\n",
+        "stderr": "2026-03-05 08:48:02,809 - odoo_mcp_server - INFO - Connected to Odoo (SIMULATION MODE)\n2026-03-05 08:48:02,810 - ceo_briefing - INFO - Generating CEO briefing...\n2026-03-05 08:48:02,810 - ceo_briefing - INFO - Gathering accounting data...\n2026-03-05 08:48:02,819 - ceo_briefing - INFO - Gathering social media data...\n2026-03-05 08:48:02,848 - ceo_briefing - INFO - Gathering system health data...\n2026-03-05 08:48:02,895 - ceo_briefing - INFO - CEO Briefing saved to /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/ceo_briefing_20260305.md\n"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "demo_multi_001",
+      "type": "multi_step",
+      "title": "Multi-step Demo",
+      "description": "Demonstrate multi-step task execution",
+      "status": "in_progress",
+      "priority": 4,
+      "created_at": "2026-03-05T08:46:32.896950",
+      "updated_at": "2026-03-05T08:48:03.435978",
+      "started_at": "2026-03-05T08:48:03.435972",
+      "completed_at": null,
+      "steps": [
+        {
+          "name": "Step 1",
+          "type": "delay",
+          "seconds": 1
+        },
+        {
+          "name": "Step 2",
+          "type": "command",
+          "command": "echo 'Step 2 complete'"
+        },
+        {
+          "name": "Step 3",
+          "type": "delay",
+          "seconds": 1
+        }
+      ],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [],
+      "blocks": [],
+      "result": null,
+      "metadata": {}
+    },
+    {
+      "id": "demo_health_001",
+      "type": "system_health_check",
+      "title": "System Health Check",
+      "description": "Verify all system components are operational",
+      "status": "completed",
+      "priority": 2,
+      "created_at": "2026-03-05T09:17:21.770790",
+      "updated_at": "2026-03-05T09:17:21.949112",
+      "started_at": "2026-03-05T09:17:21.949108",
+      "completed_at": "2026-03-05T09:17:22.035908",
+      "steps": [],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [],
+      "blocks": [],
+      "result": {
+        "success": true,
+        "health_report": {
+          "timestamp": "2026-03-05T09:17:21.978922",
+          "checks": [
+            {
+              "name": "Directory: Approved",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Approved"
+            },
+            {
+              "name": "Directory: Done",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Done"
+            },
+            {
+              "name": "Directory: Drafts",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Drafts"
+            },
+            {
+              "name": "Directory: Executive",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive"
+            },
+            {
+              "name": "Directory: Logs",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Logs"
+            },
+            {
+              "name": "Directory: System",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/System"
+            },
+            {
+              "name": "Script: social_media_orchestrator.py",
+              "status": "ok"
+            },
+            {
+              "name": "Script: social_campaign_engine.py",
+              "status": "ok"
+            },
+            {
+              "name": "Script: weekly_ceo_briefing.py",
+              "status": "ok"
+            }
+          ],
+          "overall_status": "healthy"
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "id": "demo_audit_001",
+      "type": "accounting_audit",
+      "title": "Weekly Accounting Audit",
+      "description": "Generate accounting audit report",
+      "status": "completed",
+      "priority": 3,
+      "created_at": "2026-03-05T09:17:21.770824",
+      "updated_at": "2026-03-05T09:17:22.558611",
+      "started_at": "2026-03-05T09:17:22.558601",
+      "completed_at": "2026-03-05T09:17:23.180596",
+      "steps": [],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [
+        "demo_health_001"
+      ],
+      "blocks": [],
+      "result": {
+        "success": true,
+        "stdout": "\n=== Generating Weekly Accounting Audit ===\n\nAudit generated successfully!\nSaved to: /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/accounting_audit_20260305.md\n\n--- Executive Summary ---\nCash Position: $173,500.00\nWeekly Cash Flow: $26,000.00\nYTD Profit Margin: 61.1%\n\n--- Risks Identified ---\n  [MEDIUM] Receivables: $5,200.00 overdue from 1 invoices\n",
+        "stderr": "2026-03-05 09:17:23,092 - odoo_mcp_server - INFO - Connected to Odoo (SIMULATION MODE)\n2026-03-05 09:17:23,160 - odoo_mcp_server - INFO - Audit saved to /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/accounting_audit_20260305.md\n"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "demo_ceo_001",
+      "type": "ceo_briefing",
+      "title": "CEO Weekly Briefing",
+      "description": "Generate comprehensive CEO briefing",
+      "status": "completed",
+      "priority": 3,
+      "created_at": "2026-03-05T09:17:21.770834",
+      "updated_at": "2026-03-05T09:17:23.755483",
+      "started_at": "2026-03-05T09:17:23.755478",
+      "completed_at": "2026-03-05T09:17:24.265192",
+      "steps": [],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [
+        "demo_audit_001"
+      ],
+      "blocks": [],
+      "result": {
+        "success": true,
+        "stdout": "\n============================================================\n      WEEKLY CEO BRIEFING GENERATOR\n      Gold Tier - AI Employee System\n============================================================\n\nBriefing saved to: /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/ceo_briefing_20260305.md\n\n============================================================\n      Briefing Generation Complete\n============================================================\n\n",
+        "stderr": "2026-03-05 09:17:24,209 - odoo_mcp_server - INFO - Connected to Odoo (SIMULATION MODE)\n2026-03-05 09:17:24,209 - ceo_briefing - INFO - Generating CEO briefing...\n2026-03-05 09:17:24,209 - ceo_briefing - INFO - Gathering accounting data...\n2026-03-05 09:17:24,215 - ceo_briefing - INFO - Gathering social media data...\n2026-03-05 09:17:24,229 - ceo_briefing - INFO - Gathering system health data...\n2026-03-05 09:17:24,255 - ceo_briefing - INFO - CEO Briefing saved to /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/ceo_briefing_20260305.md\n"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "demo_multi_001",
+      "type": "multi_step",
+      "title": "Multi-step Demo",
+      "description": "Demonstrate multi-step task execution",
+      "status": "in_progress",
+      "priority": 4,
+      "created_at": "2026-03-05T09:17:21.770843",
+      "updated_at": "2026-03-05T09:17:24.817674",
+      "started_at": "2026-03-05T09:17:24.817669",
+      "completed_at": null,
+      "steps": [
+        {
+          "name": "Step 1",
+          "type": "delay",
+          "seconds": 1
+        },
+        {
+          "name": "Step 2",
+          "type": "command",
+          "command": "echo 'Step 2 complete'"
+        },
+        {
+          "name": "Step 3",
+          "type": "delay",
+          "seconds": 1
+        }
+      ],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [],
+      "blocks": [],
+      "result": null,
+      "metadata": {}
+    },
+    {
+      "id": "demo_health_001",
+      "type": "system_health_check",
+      "title": "System Health Check",
+      "description": "Verify all system components are operational",
+      "status": "completed",
+      "priority": 2,
+      "created_at": "2026-03-12T09:16:45.539351",
+      "updated_at": "2026-03-12T09:16:45.790386",
+      "started_at": "2026-03-12T09:16:45.790373",
+      "completed_at": "2026-03-12T09:16:45.879541",
+      "steps": [],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [],
+      "blocks": [],
+      "result": {
+        "success": true,
+        "health_report": {
+          "timestamp": "2026-03-12T09:16:45.826637",
+          "checks": [
+            {
+              "name": "Directory: Approved",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Approved"
+            },
+            {
+              "name": "Directory: Done",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Done"
+            },
+            {
+              "name": "Directory: Drafts",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Drafts"
+            },
+            {
+              "name": "Directory: Executive",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive"
+            },
+            {
+              "name": "Directory: Logs",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Logs"
+            },
+            {
+              "name": "Directory: System",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/System"
+            },
+            {
+              "name": "Script: social_media_orchestrator.py",
+              "status": "ok"
+            },
+            {
+              "name": "Script: social_campaign_engine.py",
+              "status": "ok"
+            },
+            {
+              "name": "Script: weekly_ceo_briefing.py",
+              "status": "ok"
+            }
+          ],
+          "overall_status": "healthy"
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "id": "demo_audit_001",
+      "type": "accounting_audit",
+      "title": "Weekly Accounting Audit",
+      "description": "Generate accounting audit report",
+      "status": "completed",
+      "priority": 3,
+      "created_at": "2026-03-12T09:16:45.539398",
+      "updated_at": "2026-03-12T09:16:46.415088",
+      "started_at": "2026-03-12T09:16:46.415082",
+      "completed_at": "2026-03-12T09:16:47.355934",
+      "steps": [],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [
+        "demo_health_001"
+      ],
+      "blocks": [],
+      "result": {
+        "success": true,
+        "stdout": "\n=== Generating Weekly Accounting Audit ===\n\nAudit generated successfully!\nSaved to: /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/accounting_audit_20260312.md\n\n--- Executive Summary ---\nCash Position: $173,500.00\nWeekly Cash Flow: $26,000.00\nYTD Profit Margin: 61.1%\n\n--- Risks Identified ---\n  [MEDIUM] Receivables: $5,200.00 overdue from 1 invoices\n",
+        "stderr": "2026-03-12 09:16:47,280 - odoo_mcp_server - INFO - Connected to Odoo (SIMULATION MODE)\n2026-03-12 09:16:47,334 - odoo_mcp_server - INFO - Audit saved to /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/accounting_audit_20260312.md\n"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "demo_ceo_001",
+      "type": "ceo_briefing",
+      "title": "CEO Weekly Briefing",
+      "description": "Generate comprehensive CEO briefing",
+      "status": "completed",
+      "priority": 3,
+      "created_at": "2026-03-12T09:16:45.539410",
+      "updated_at": "2026-03-12T09:16:47.896161",
+      "started_at": "2026-03-12T09:16:47.896155",
+      "completed_at": "2026-03-12T09:16:49.575064",
+      "steps": [],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [
+        "demo_audit_001"
+      ],
+      "blocks": [],
+      "result": {
+        "success": true,
+        "stdout": "\n============================================================\n      WEEKLY CEO BRIEFING GENERATOR\n      Gold Tier - AI Employee System\n============================================================\n\nBriefing saved to: /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/ceo_briefing_20260312.md\n\n============================================================\n      Briefing Generation Complete\n============================================================\n\n",
+        "stderr": "2026-03-12 09:16:49,381 - odoo_mcp_server - INFO - Connected to Odoo (SIMULATION MODE)\n2026-03-12 09:16:49,381 - ceo_briefing - INFO - Generating CEO briefing...\n2026-03-12 09:16:49,381 - ceo_briefing - INFO - Gathering accounting data...\n2026-03-12 09:16:49,389 - ceo_briefing - INFO - Gathering social media data...\n2026-03-12 09:16:49,438 - ceo_briefing - INFO - Gathering system health data...\n2026-03-12 09:16:49,517 - ceo_briefing - INFO - CEO Briefing saved to /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/ceo_briefing_20260312.md\n"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "demo_multi_001",
+      "type": "multi_step",
+      "title": "Multi-step Demo",
+      "description": "Demonstrate multi-step task execution",
+      "status": "in_progress",
+      "priority": 4,
+      "created_at": "2026-03-12T09:16:45.539422",
+      "updated_at": "2026-03-12T09:16:50.116781",
+      "started_at": "2026-03-12T09:16:50.116775",
+      "completed_at": null,
+      "steps": [
+        {
+          "name": "Step 1",
+          "type": "delay",
+          "seconds": 1
+        },
+        {
+          "name": "Step 2",
+          "type": "command",
+          "command": "echo 'Step 2 complete'"
+        },
+        {
+          "name": "Step 3",
+          "type": "delay",
+          "seconds": 1
+        }
+      ],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [],
+      "blocks": [],
+      "result": null,
+      "metadata": {}
+    },
+    {
+      "id": "demo_health_001",
+      "type": "system_health_check",
+      "title": "System Health Check",
+      "description": "Verify all system components are operational",
+      "status": "completed",
+      "priority": 2,
+      "created_at": "2026-03-12T09:18:58.225945",
+      "updated_at": "2026-03-12T09:18:58.436374",
+      "started_at": "2026-03-12T09:18:58.436369",
+      "completed_at": "2026-03-12T09:18:58.507354",
+      "steps": [],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [],
+      "blocks": [],
+      "result": {
+        "success": true,
+        "health_report": {
+          "timestamp": "2026-03-12T09:18:58.468992",
+          "checks": [
+            {
+              "name": "Directory: Approved",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Approved"
+            },
+            {
+              "name": "Directory: Done",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Done"
+            },
+            {
+              "name": "Directory: Drafts",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Drafts"
+            },
+            {
+              "name": "Directory: Executive",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive"
+            },
+            {
+              "name": "Directory: Logs",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Logs"
+            },
+            {
+              "name": "Directory: System",
+              "status": "ok",
+              "path": "/mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/System"
+            },
+            {
+              "name": "Script: social_media_orchestrator.py",
+              "status": "ok"
+            },
+            {
+              "name": "Script: social_campaign_engine.py",
+              "status": "ok"
+            },
+            {
+              "name": "Script: weekly_ceo_briefing.py",
+              "status": "ok"
+            }
+          ],
+          "overall_status": "healthy"
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "id": "demo_audit_001",
+      "type": "accounting_audit",
+      "title": "Weekly Accounting Audit",
+      "description": "Generate accounting audit report",
+      "status": "completed",
+      "priority": 3,
+      "created_at": "2026-03-12T09:18:58.225986",
+      "updated_at": "2026-03-12T09:18:59.066667",
+      "started_at": "2026-03-12T09:18:59.066660",
+      "completed_at": "2026-03-12T09:18:59.880425",
+      "steps": [],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [
+        "demo_health_001"
+      ],
+      "blocks": [],
+      "result": {
+        "success": true,
+        "stdout": "\n=== Generating Weekly Accounting Audit ===\n\nAudit generated successfully!\nSaved to: /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/accounting_audit_20260312.md\n\n--- Executive Summary ---\nCash Position: $173,500.00\nWeekly Cash Flow: $26,000.00\nYTD Profit Margin: 61.1%\n\n--- Risks Identified ---\n  [MEDIUM] Receivables: $5,200.00 overdue from 1 invoices\n",
+        "stderr": "2026-03-12 09:18:59,793 - odoo_mcp_server - INFO - Connected to Odoo (SIMULATION MODE)\n2026-03-12 09:18:59,834 - odoo_mcp_server - INFO - Audit saved to /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/accounting_audit_20260312.md\n"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "demo_ceo_001",
+      "type": "ceo_briefing",
+      "title": "CEO Weekly Briefing",
+      "description": "Generate comprehensive CEO briefing",
+      "status": "completed",
+      "priority": 3,
+      "created_at": "2026-03-12T09:18:58.225998",
+      "updated_at": "2026-03-12T09:19:00.445463",
+      "started_at": "2026-03-12T09:19:00.445455",
+      "completed_at": "2026-03-12T09:19:01.902738",
+      "steps": [],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [
+        "demo_audit_001"
+      ],
+      "blocks": [],
+      "result": {
+        "success": true,
+        "stdout": "\n============================================================\n      WEEKLY CEO BRIEFING GENERATOR\n      Gold Tier - AI Employee System\n============================================================\n\nBriefing saved to: /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/ceo_briefing_20260312.md\n\n============================================================\n      Briefing Generation Complete\n============================================================\n\n",
+        "stderr": "2026-03-12 09:19:01,732 - odoo_mcp_server - INFO - Connected to Odoo (SIMULATION MODE)\n2026-03-12 09:19:01,733 - ceo_briefing - INFO - Generating CEO briefing...\n2026-03-12 09:19:01,733 - ceo_briefing - INFO - Gathering accounting data...\n2026-03-12 09:19:01,739 - ceo_briefing - INFO - Gathering social media data...\n2026-03-12 09:19:01,777 - ceo_briefing - INFO - Gathering system health data...\n2026-03-12 09:19:01,845 - ceo_briefing - INFO - CEO Briefing saved to /mnt/c/Users/Fozia/Hackhton0/Bronze-tier/AI_Employee_Vault/Executive/ceo_briefing_20260312.md\n"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "demo_multi_001",
+      "type": "multi_step",
+      "title": "Multi-step Demo",
+      "description": "Demonstrate multi-step task execution",
+      "status": "in_progress",
+      "priority": 4,
+      "created_at": "2026-03-12T09:18:58.226010",
+      "updated_at": "2026-03-12T09:19:02.433044",
+      "started_at": "2026-03-12T09:19:02.433039",
+      "completed_at": null,
+      "steps": [
+        {
+          "name": "Step 1",
+          "type": "delay",
+          "seconds": 1
+        },
+        {
+          "name": "Step 2",
+          "type": "command",
+          "command": "echo 'Step 2 complete'"
+        },
+        {
+          "name": "Step 3",
+          "type": "delay",
+          "seconds": 1
+        }
+      ],
+      "current_step": 0,
+      "retry_count": 0,
+      "max_retries": 3,
+      "last_error": null,
+      "depends_on": [],
+      "blocks": [],
+      "result": null,
+      "metadata": {}
+    }
+  ],
+  "updated_at": "2026-03-12T09:19:02.442259"
+}

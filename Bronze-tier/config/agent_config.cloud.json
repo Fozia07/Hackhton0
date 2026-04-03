@@ -1,0 +1,46 @@
+{
+  "agent_id": "cloud",
+  "agent_type": "cloud",
+  "is_active": true,
+  "description": "Cloud Agent - runs 24/7 on cloud VM, handles triage and drafts only",
+  "owned_zones": [
+    "email_triage",
+    "social_draft",
+    "odoo_read"
+  ],
+  "draft_only_zones": [
+    "email_send",
+    "social_post"
+  ],
+  "read_only_zones": [
+    "accounting",
+    "ceo_briefing"
+  ],
+  "permissions": {
+    "can_send_email": false,
+    "can_post_social": false,
+    "can_make_payment": false,
+    "can_approve": false,
+    "can_write_dashboard": false,
+    "can_access_whatsapp": false,
+    "can_write_odoo": false,
+    "can_draft_email": true,
+    "can_draft_social": true,
+    "can_read_odoo": true
+  },
+  "settings": {
+    "auto_merge_updates": false,
+    "heartbeat_interval_seconds": 60,
+    "signal_check_interval_seconds": 30,
+    "max_tasks_per_cycle": 20,
+    "always_create_approval": true
+  },
+  "restrictions": {
+    "no_secrets_access": true,
+    "no_whatsapp_session": true,
+    "no_payment_tokens": true,
+    "draft_requires_approval": true
+  },
+  "created_at": "2026-03-25T00:00:00Z",
+  "version": "1.0.0"
+}

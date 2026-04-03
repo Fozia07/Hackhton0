@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-02-27T02:02:41.415765",
+  "state": "safe_mode",
+  "uptime_seconds": 832.661513,
+  "processes_healthy": 0,
+  "processes_warning": 0,
+  "processes_critical": 7,
+  "processes_total": 7,
+  "cpu_percent": 0.0,
+  "memory_percent": 10.2,
+  "disk_percent": 0.4,
+  "resource_level": "normal",
+  "throttle_factor": 1.0,
+  "safe_mode_active": true,
+  "safe_mode_reason": "restart_threshold",
+  "open_circuits": [],
+  "recent_incidents": 34,
+  "last_scan": "2026-02-27T02:02:40.988370"
+}

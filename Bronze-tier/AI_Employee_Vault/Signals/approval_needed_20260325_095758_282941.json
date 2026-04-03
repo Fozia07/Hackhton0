@@ -1,0 +1,13 @@
+{
+  "signal_id": "approval_needed_20260325_095758_282941",
+  "signal_type": "approval_needed",
+  "from_agent": "cloud",
+  "to_agent": "local",
+  "payload": {
+    "task": "EMAIL_client.md",
+    "draft": "DRAFT_EMAIL_client.md"
+  },
+  "created_at": "2026-03-25T09:57:58.282941",
+  "expires_at": "2026-03-25T10:57:58.282941",
+  "acknowledged": false
+}

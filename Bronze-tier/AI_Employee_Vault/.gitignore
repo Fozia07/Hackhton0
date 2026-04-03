@@ -1,0 +1,178 @@
+# AI_Employee_Vault .gitignore
+# Platinum Tier - Multi-Agent Sync Configuration
+# This file controls what syncs between Cloud and Local agents
+
+# =============================================================================
+# SECURITY - NEVER SYNC THESE (Critical)
+# =============================================================================
+
+# Environment and credentials
+.env
+.env.*
+.env.local
+.env.production
+*.env
+
+# API keys and tokens
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+token.json
+tokens/
+secrets/
+*.secret
+api_keys.json
+oauth_tokens.json
+
+# Session data
+session/
+sessions/
+*.session
+.session_*
+
+# =============================================================================
+# LOGS - Keep structure, exclude content
+# =============================================================================
+
+# Log files (recreated locally)
+Logs/*.log
+Logs/*.json
+Logs/sync_*.log
+Logs/sync_status.json
+
+# Keep the directory structure
+!Logs/.gitkeep
+
+# Screenshots and captures
+Logs/screenshots/
+*.screenshot.png
+
+# =============================================================================
+# TEMPORARY FILES
+# =============================================================================
+
+# Editor swap files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+.Spotlight-V100
+.Trashes
+
+# =============================================================================
+# CLAIM SYSTEM - Lock files (local only)
+# =============================================================================
+
+# Lock files from claim-by-move system
+*.lock
+.locks/
+.claim_*
+In_Progress/*/.claiming
+
+# =============================================================================
+# SYNC METADATA (local only)
+# =============================================================================
+
+# Sync status files
+.sync_status
+.last_sync
+.sync_lock
+
+# Update acknowledgments (processed locally)
+Updates/*.processed
+Signals/*.acknowledged
+
+# =============================================================================
+# OBSIDIAN (Optional - uncomment to exclude)
+# =============================================================================
+
+# Obsidian configuration (local preferences)
+# Uncomment if each machine should have its own Obsidian settings
+# .obsidian/workspace.json
+# .obsidian/workspaces.json
+# .obsidian/appearance.json
+
+# Keep Obsidian plugins and snippets synced
+# !.obsidian/plugins/
+# !.obsidian/snippets/
+
+# =============================================================================
+# DEVELOPMENT
+# =============================================================================
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments (shouldn't be in vault anyway)
+venv/
+.venv/
+env/
+
+# IDE settings
+.vscode/
+.idea/
+*.sublime-*
+
+# =============================================================================
+# LARGE FILES (keep vault lightweight)
+# =============================================================================
+
+# Images (except in Business folder)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+*.svg
+
+# Allow images in specific folders
+!Business/**/*.png
+!Business/**/*.jpg
+!Business/**/*.jpeg
+!Drafts/**/*.png
+!Drafts/**/*.jpg
+
+# Videos and audio
+*.mp4
+*.avi
+*.mov
+*.mp3
+*.wav
+
+# Archives
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# =============================================================================
+# WHAT GETS SYNCED (for reference)
+# =============================================================================
+# The following ARE synced between Cloud and Local:
+# - All .md files (tasks, drafts, notes)
+# - Needs_Action/* (new tasks)
+# - Pending_Approval/* (drafts awaiting approval)
+# - Approved/* (ready to execute)
+# - Done/* (completed tasks)
+# - In_Progress/cloud/* and In_Progress/local/* (claimed tasks)
+# - Updates/*.json (agent communication)
+# - Signals/*.json (inter-agent signals)
+# - Dashboard.md (status overview)
+# - Business/* (business documents)
+# - Plans/* (plans and strategies)
+# - Schedules/* (scheduling info)

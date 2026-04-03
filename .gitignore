@@ -1,28 +1,51 @@
-# Environment and secrets
-.env
-secrets/
-*.pem
-*.key
-
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
-.Python
 *.so
-.venv/
+.Python
 venv/
+.venv/
+env/
 
 # IDE
 .vscode/
 .idea/
+*.sublime-*
 
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Logs (keep structure, ignore content)
-AI_Employee_Vault/Logs/*.json
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+token.json
+secrets/
 
-# Obsidian (optional - remove if you want to track)
-.obsidian/
+# Logs
+*.log
+logs/
+
+# Sessions
+session/
+sessions/
+*.session
+
+# Temporary
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# Deploy
+deploy/.env
+
+# Obsidian workspace (keep plugins)
+Bronze-tier/AI_Employee_Vault/.obsidian/workspace.json
+Bronze-tier/AI_Employee_Vault/.obsidian/workspaces.json

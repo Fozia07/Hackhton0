@@ -1,0 +1,75 @@
+{
+  "report_type": "Weekly Accounting Audit",
+  "generated_at": "2026-03-12T09:18:59.804852",
+  "period": {
+    "start": "2026-03-05",
+    "end": "2026-03-12"
+  },
+  "executive_summary": {
+    "cash_position": 173500.0,
+    "weekly_cash_in": 26000.0,
+    "weekly_cash_out": 0,
+    "net_cash_flow": 26000.0,
+    "ytd_profit_margin": 61.1
+  },
+  "key_metrics": {
+    "company": "AI Employee Corp",
+    "currency": "USD",
+    "as_of_date": "2026-03-12 09:18",
+    "cash_position": {
+      "cash": 45000.0,
+      "bank": 128500.0,
+      "total_liquid": 173500.0
+    },
+    "receivables": {
+      "total_outstanding": 24700.0,
+      "overdue_amount": 5200.0,
+      "overdue_count": 1
+    },
+    "payables": {
+      "total_outstanding": 0
+    },
+    "ytd_performance": {
+      "revenue": 185000.0,
+      "expenses": 72000.0,
+      "net_income": 113000.0,
+      "profit_margin": 61.1
+    },
+    "pending_approvals": {
+      "expenses": 299.0,
+      "expense_count": 1
+    }
+  },
+  "weekly_activity": {
+    "payments_received": 26000.0,
+    "payments_made": 0,
+    "expenses_incurred": 484.0,
+    "invoices_issued": 1
+  },
+  "overdue_invoices": [
+    {
+      "id": 1004,
+      "number": "INV/2026/0004",
+      "partner_name": "CloudServe Ltd",
+      "date_invoice": "2026-01-26",
+      "date_due": "2026-02-25",
+      "amount_total": 5200.0,
+      "amount_paid": 0.0,
+      "state": "overdue",
+      "type": "out_invoice",
+      "currency": "USD",
+      "days_overdue": 15
+    }
+  ],
+  "risks": [
+    {
+      "level": "MEDIUM",
+      "category": "Receivables",
+      "description": "$5,200.00 overdue from 1 invoices",
+      "action": "Follow up with customers immediately"
+    }
+  ],
+  "recommendations": [
+    "Priority: Collect $5,200.00 from CloudServe Ltd (15 days overdue)"
+  ]
+}

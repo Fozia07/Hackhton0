@@ -1,0 +1,130 @@
+{
+  "report_type": "Weekly CEO Briefing",
+  "generated_at": "2026-03-09T01:55:28.669943",
+  "period": {
+    "start": "2026-03-02",
+    "end": "2026-03-09"
+  },
+  "overall_health_score": 95,
+  "executive_summary": "Overall business health is excellent (score: 95/100). Financial position shows $173,500 in liquid assets with 61.1% YTD profit margin. Social media presence generated 4,699 total engagements across 16 posts. System operations are stable.",
+  "financial_overview": {
+    "financial_summary": {
+      "company": "AI Employee Corp",
+      "currency": "USD",
+      "as_of_date": "2026-03-09 01:55",
+      "cash_position": {
+        "cash": 45000.0,
+        "bank": 128500.0,
+        "total_liquid": 173500.0
+      },
+      "receivables": {
+        "total_outstanding": 24700.0,
+        "overdue_amount": 5200.0,
+        "overdue_count": 1
+      },
+      "payables": {
+        "total_outstanding": 0
+      },
+      "ytd_performance": {
+        "revenue": 185000.0,
+        "expenses": 72000.0,
+        "net_income": 113000.0,
+        "profit_margin": 61.1
+      },
+      "pending_approvals": {
+        "expenses": 299.0,
+        "expense_count": 1
+      }
+    },
+    "overdue_invoices": [
+      {
+        "id": 1004,
+        "number": "INV/2026/0004",
+        "partner_name": "CloudServe Ltd",
+        "date_invoice": "2026-01-23",
+        "date_due": "2026-02-22",
+        "amount_total": 5200.0,
+        "amount_paid": 0.0,
+        "state": "overdue",
+        "type": "out_invoice",
+        "currency": "USD",
+        "days_overdue": 15
+      }
+    ],
+    "cash_flow_forecast": {
+      "current_cash": 173500.0,
+      "expected_inflow_30d": 8500.0,
+      "projected_cash_30d": 182000.0,
+      "forecast_days": 30,
+      "status": "healthy"
+    },
+    "status": "success"
+  },
+  "social_media_overview": {
+    "total_posts": 16,
+    "total_engagement": 4699,
+    "avg_engagement": 293.6875,
+    "platform_breakdown": {
+      "facebook": {
+        "posts": 4,
+        "engagement": 730
+      },
+      "linkedin": {
+        "posts": 4,
+        "engagement": 1820
+      },
+      "twitter": {
+        "posts": 4,
+        "engagement": 256
+      },
+      "instagram": {
+        "posts": 4,
+        "engagement": 1893
+      }
+    },
+    "insights": {
+      "best_platform": "linkedin",
+      "worst_platform": "twitter",
+      "best_theme": "Community Engagement",
+      "worst_theme": "Call to Action",
+      "best_posting_times": {
+        "facebook": "09:00",
+        "linkedin": "08:00",
+        "twitter": "12:00",
+        "instagram": "19:00"
+      },
+      "engagement_trend": "increasing",
+      "recommendations": [
+        "Increase content volume on linkedin",
+        "Review and optimize twitter content strategy",
+        "Increase 'Community Engagement' themed content by 20%",
+        "Reduce or revamp 'Call to Action' content",
+        "Test posting at different times based on platform analytics"
+      ],
+      "alerts": [],
+      "generated_at": "2026-03-05T09:21:09.099307"
+    },
+    "status": "success"
+  },
+  "system_health": {
+    "recent_runs": 0,
+    "errors_detected": 0,
+    "error_rate": 0,
+    "watchdog_status": "unknown",
+    "autonomous_triggers": 1,
+    "last_autonomous_decision": "campaign_triggered",
+    "status": "success"
+  },
+  "risk_alerts": [
+    {
+      "category": "Financial",
+      "severity": "MEDIUM",
+      "title": "Overdue Receivables",
+      "description": "$5,200.00 overdue from 1 invoices",
+      "action": "Initiate collection process"
+    }
+  ],
+  "recommendations": [
+    "Strong profit margin - consider reinvesting in growth initiatives"
+  ]
+}

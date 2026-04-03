@@ -1,0 +1,8 @@
+{
+  "original_file": "FACEBOOK_POST_20260307_social_proof.md",
+  "platform": "facebook",
+  "attempts": 3,
+  "last_error": "usage: facebook_poster.py [-h] --file FILE [--post-file POST_FILE]\n                          [--simulate] [--live] [--verbose]\nfacebook_poster.py: error: the following arguments are required: --file/-f\n",
+  "queued_at": "2026-03-04T01:58:58.122404",
+  "content_preview": "---\nplatform: facebook\ndate: 2026-03-07\nsuggested_time: 09:00\ntheme: Social Proof\nstatus: draft\ngenerated: 2026-03-04T01:53:22.256923\n---\n\n# Social Proof\n\n\ud83c\udfaf Social Proof\n\nIt's time to rethink ai automation tools for productivity.\n\nSee how others are achieving Increase product awareness and drive signups with our approach.\n\nWe're on a mission to help Young developers and tech startups achieve Increase product awareness and drive signups.\n\nWhat challenges are you facing with AI automation tools fo"
+}

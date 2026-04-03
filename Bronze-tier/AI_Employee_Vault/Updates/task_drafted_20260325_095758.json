@@ -1,0 +1,9 @@
+{
+  "type": "task_drafted",
+  "from_agent": "cloud",
+  "timestamp": "2026-03-25T09:57:58.361508",
+  "data": {
+    "task": "EMAIL_client.md",
+    "type": "email"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "last_trigger_timestamp": "2026-03-12T09:18:57.418525",
+  "trigger_count_this_week": 1,
+  "week_start": "2026-03-09",
+  "last_decision": "campaign_triggered",
+  "last_reason": "High priority: Manual Force Trigger",
+  "history": [
+    {
+      "timestamp": "2026-03-12T09:18:57.418525",
+      "decision": "campaign_triggered",
+      "reason": "High priority: Manual Force Trigger",
+      "triggered": true
+    }
+  ]
+}

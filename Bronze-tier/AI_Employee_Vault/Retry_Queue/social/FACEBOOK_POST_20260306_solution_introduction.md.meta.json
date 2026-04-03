@@ -1,0 +1,8 @@
+{
+  "original_file": "FACEBOOK_POST_20260306_solution_introduction.md",
+  "platform": "facebook",
+  "attempts": 3,
+  "last_error": "usage: facebook_poster.py [-h] --file FILE [--post-file POST_FILE]\n                          [--simulate] [--live] [--verbose]\nfacebook_poster.py: error: the following arguments are required: --file/-f\n",
+  "queued_at": "2026-03-04T01:57:31.946340",
+  "content_preview": "---\nplatform: facebook\ndate: 2026-03-06\nsuggested_time: 16:00\ntheme: Solution Introduction\nstatus: draft\ngenerated: 2026-03-04T01:53:22.187011\n---\n\n# Solution Introduction\n\nDay 2: Solution Introduction\n\nThe game-changer Young developers and tech startups need: AI automation tools for productivity made simple.\n\nThis is part of our ongoing commitment to Young developers and tech startups.\n\n\ud83d\udcac We'd love to hear your thoughts - what's your experience with AI automation tools for productivity?\n\n#Innov"
+}

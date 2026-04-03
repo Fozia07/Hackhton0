@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "odoo-accounting": {
+      "command": "python",
+      "args": [
+        "mcp_servers/odoo_accounting/server.py",
+        "--mode", "stdio",
+        "--simulate"
+      ],
+      "description": "Odoo Accounting MCP Server for financial operations, invoices, payments, expenses, and CEO briefings",
+      "env": {
+        "ODOO_URL": "http://localhost:8069",
+        "ODOO_DATABASE": "odoo_db"
+      }
+    }
+  }
+}

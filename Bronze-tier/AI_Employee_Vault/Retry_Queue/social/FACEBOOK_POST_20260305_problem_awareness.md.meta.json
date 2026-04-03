@@ -1,0 +1,8 @@
+{
+  "original_file": "FACEBOOK_POST_20260305_problem_awareness.md",
+  "platform": "facebook",
+  "attempts": 3,
+  "last_error": "usage: facebook_poster.py [-h] --file FILE [--post-file POST_FILE]\n                          [--simulate] [--live] [--verbose]\nfacebook_poster.py: error: the following arguments are required: --file/-f\n",
+  "queued_at": "2026-03-04T01:56:06.343419",
+  "content_preview": "---\nplatform: facebook\ndate: 2026-03-05\nsuggested_time: 16:00\ntheme: Problem Awareness\nstatus: draft\ngenerated: 2026-03-04T01:53:22.128466\n---\n\n# Problem Awareness\n\nHave you ever wondered ai automation tools for productivity?\n\nYoung developers and tech startups often struggle with inefficiency. Here's how AI automation tools for productivity changes that.\n\nAt the heart of everything we do is helping Young developers and tech startups succeed.\n\n\ud83d\udd14 Follow our page for daily insights on AI automatio"
+}

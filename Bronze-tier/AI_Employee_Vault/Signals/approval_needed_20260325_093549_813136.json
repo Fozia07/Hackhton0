@@ -1,0 +1,13 @@
+{
+  "signal_id": "approval_needed_20260325_093549_813136",
+  "signal_type": "approval_needed",
+  "from_agent": "cloud",
+  "to_agent": "local",
+  "payload": {
+    "task": "FACEBOOK_announcement.md",
+    "draft": "DRAFT_FACEBOOK_announcement.md"
+  },
+  "created_at": "2026-03-25T09:35:49.813136",
+  "expires_at": "2026-03-25T10:35:49.813136",
+  "acknowledged": false
+}

@@ -1,0 +1,8 @@
+{
+  "original_file": "LINKEDIN_POST_TEST_001.md",
+  "platform": "linkedin",
+  "attempts": 3,
+  "last_error": "Agent not available for linkedin",
+  "queued_at": "2026-03-03T08:34:53.865268",
+  "content_preview": "This is a test LinkedIn post for failure simulation.\n"
+}

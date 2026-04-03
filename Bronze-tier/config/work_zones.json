@@ -1,0 +1,194 @@
+{
+  "version": "1.0.0",
+  "description": "Work Zone definitions for Cloud/Local agent coordination",
+  "zones": {
+    "email_triage": {
+      "name": "Email Triage",
+      "description": "Reading emails and creating draft replies",
+      "cloud_permission": "full_access",
+      "local_permission": "read_only",
+      "owner": "cloud",
+      "actions": [
+        "read_email",
+        "categorize_email",
+        "create_draft_reply",
+        "flag_urgent"
+      ],
+      "output_folder": "Drafts/email"
+    },
+    "email_send": {
+      "name": "Email Send",
+      "description": "Actually sending emails via MCP",
+      "cloud_permission": "draft_only",
+      "local_permission": "full_access",
+      "owner": "local",
+      "requires_approval": true,
+      "actions": [
+        "send_email",
+        "schedule_email"
+      ]
+    },
+    "social_draft": {
+      "name": "Social Media Drafts",
+      "description": "Creating social media post drafts",
+      "cloud_permission": "full_access",
+      "local_permission": "read_only",
+      "owner": "cloud",
+      "actions": [
+        "create_post_draft",
+        "generate_hashtags",
+        "schedule_draft"
+      ],
+      "output_folder": "Drafts"
+    },
+    "social_post": {
+      "name": "Social Media Post",
+      "description": "Publishing posts to social platforms",
+      "cloud_permission": "no_access",
+      "local_permission": "full_access",
+      "owner": "local",
+      "requires_approval": true,
+      "platforms": [
+        "facebook",
+        "twitter",
+        "linkedin",
+        "instagram"
+      ],
+      "actions": [
+        "post_to_platform",
+        "delete_post",
+        "edit_post"
+      ]
+    },
+    "approvals": {
+      "name": "Approvals",
+      "description": "Human-in-the-loop approval decisions",
+      "cloud_permission": "no_access",
+      "local_permission": "full_access",
+      "owner": "local",
+      "actions": [
+        "approve_task",
+        "reject_task",
+        "request_changes"
+      ],
+      "input_folder": "Pending_Approval",
+      "output_folders": {
+        "approved": "Approved",
+        "rejected": "Rejected"
+      }
+    },
+    "whatsapp": {
+      "name": "WhatsApp",
+      "description": "WhatsApp messaging (session required)",
+      "cloud_permission": "no_access",
+      "local_permission": "full_access",
+      "owner": "local",
+      "requires_session": true,
+      "security_level": "high",
+      "actions": [
+        "read_messages",
+        "send_message",
+        "send_media"
+      ]
+    },
+    "payments": {
+      "name": "Payments",
+      "description": "Payment processing and banking",
+      "cloud_permission": "no_access",
+      "local_permission": "full_access",
+      "owner": "local",
+      "requires_approval": true,
+      "security_level": "critical",
+      "actions": [
+        "view_balance",
+        "create_payment",
+        "approve_payment"
+      ]
+    },
+    "odoo_read": {
+      "name": "Odoo Read",
+      "description": "Reading data from Odoo ERP",
+      "cloud_permission": "full_access",
+      "local_permission": "full_access",
+      "owner": "shared",
+      "actions": [
+        "get_invoices",
+        "get_payments",
+        "get_expenses",
+        "get_financial_summary"
+      ]
+    },
+    "odoo_write": {
+      "name": "Odoo Write",
+      "description": "Writing data to Odoo ERP",
+      "cloud_permission": "no_access",
+      "local_permission": "full_access",
+      "owner": "local",
+      "requires_approval": true,
+      "actions": [
+        "create_invoice",
+        "post_payment",
+        "create_expense"
+      ]
+    },
+    "accounting": {
+      "name": "Accounting",
+      "description": "Accounting audits and reports",
+      "cloud_permission": "read_only",
+      "local_permission": "full_access",
+      "owner": "local",
+      "actions": [
+        "generate_audit",
+        "reconcile_transactions",
+        "generate_report"
+      ]
+    },
+    "ceo_briefing": {
+      "name": "CEO Briefing",
+      "description": "Weekly executive briefings",
+      "cloud_permission": "read_only",
+      "local_permission": "full_access",
+      "owner": "local",
+      "actions": [
+        "generate_briefing",
+        "send_briefing"
+      ],
+      "output_folder": "Executive"
+    },
+    "dashboard_write": {
+      "name": "Dashboard Write",
+      "description": "Writing to Dashboard.md (single-writer rule)",
+      "cloud_permission": "no_access",
+      "local_permission": "full_access",
+      "owner": "local",
+      "single_writer": true,
+      "file": "Dashboard.md"
+    }
+  },
+  "rules": {
+    "claim_by_move": {
+      "enabled": true,
+      "description": "First agent to move task to In_Progress owns it",
+      "lock_timeout_seconds": 5
+    },
+    "single_writer_dashboard": {
+      "enabled": true,
+      "description": "Only Local agent writes to Dashboard.md",
+      "cloud_uses_updates_folder": true
+    },
+    "approval_required": {
+      "zones": ["email_send", "social_post", "payments", "odoo_write"],
+      "description": "These zones require human approval before final action"
+    },
+    "secrets_never_sync": {
+      "enabled": true,
+      "patterns": [".env", "*.pem", "*.key", "credentials.json", "token.json", "session/"]
+    }
+  },
+  "folder_mapping": {
+    "cloud_workspace": "In_Progress/cloud",
+    "local_workspace": "In_Progress/local",
+    "updates": "Updates",
+    "signals": "Signals"
+  }
+}
