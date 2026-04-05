@@ -27,7 +27,7 @@ services:
     environment:
       - VAULT_AGENT_ID=cloud
       - VAULT_PATH=/data/AI_Employee_Vault
-      - VAULT_SYNC_BRANCH=${VAULT_SYNC_BRANCH:-main}
+      - VAULT_SYNC_BRANCH=main
       - SYNC_INTERVAL=${SYNC_INTERVAL:-60}
       - AGENT_INTERVAL=${AGENT_INTERVAL:-30}
       - GIT_USER_NAME=${GIT_USER_NAME:-AI Employee Cloud Agent}
