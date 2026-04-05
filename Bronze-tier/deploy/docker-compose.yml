@@ -12,7 +12,7 @@
 #   2. Copy SSH key to ./ssh/id_ed25519
 #   3. Create .env file with configuration
 
-version: '3.8'
+version: "2.4"
 
 services:
   cloud-agent:
@@ -26,33 +26,17 @@ services:
     environment:
       - VAULT_AGENT_ID=cloud
       - VAULT_PATH=/data/AI_Employee_Vault
-      - VAULT_SYNC_BRANCH=${VAULT_SYNC_BRANCH:-main}
-      - SYNC_INTERVAL=${SYNC_INTERVAL:-60}
-      - AGENT_INTERVAL=${AGENT_INTERVAL:-30}
-      - GIT_USER_NAME=${GIT_USER_NAME:-AI Employee Cloud Agent}
-      - GIT_USER_EMAIL=${GIT_USER_EMAIL:-cloud-agent@aiemployee.local}
-      - TZ=${TZ:-UTC}
+      - VAULT_SYNC_BRANCH=main
+      - SYNC_INTERVAL=60
+      - AGENT_INTERVAL=30
+      - GIT_USER_NAME=AI Employee Cloud Agent
+      - GIT_USER_EMAIL=cloud-agent@aiemployee.local
+      - TZ=UTC
 
     volumes:
-      - ${VAULT_PATH:-./vault}:/data/AI_Employee_Vault
-      - ${SSH_PATH:-./ssh}:/ssh:ro
-      - ${LOGS_PATH:-./logs}:/logs
-
-    healthcheck:
-      test: ["CMD", "python", "/app/healthcheck.py"]
-      interval: 60s
-      timeout: 30s
-      retries: 3
-      start_period: 60s
-
-    deploy:
-      resources:
-        limits:
-          cpus: '1.0'
-          memory: 512M
-        reservations:
-          cpus: '0.25'
-          memory: 128M
+      - ./vault:/data/AI_Employee_Vault
+      - ./ssh:/ssh:ro
+      - ./logs:/logs
 
     logging:
       driver: "json-file"
@@ -66,9 +50,3 @@ services:
 networks:
   ai-employee-network:
     driver: bridge
-
-volumes:
-  vault-data:
-    driver: local
-  logs-data:
-    driver: local
