@@ -12,7 +12,6 @@
 #   2. Copy SSH key to ./ssh/id_ed25519
 #   3. Create .env file with configuration
 
-version: '3.8'
 
 services:
   # Main Cloud Agent Service
