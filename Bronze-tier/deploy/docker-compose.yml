@@ -12,7 +12,7 @@
 #   2. Copy SSH key to ./ssh/id_ed25519
 #   3. Create .env file with configuration
 
-version: "2.4"
+version: "2"
 
 services:
   cloud-agent:
