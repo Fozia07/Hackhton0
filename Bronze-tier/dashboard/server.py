@@ -32,11 +32,16 @@ PENDING_APPROVAL = VAULT_DIR / "Pending_Approval"
 DONE = VAULT_DIR / "Done"
 LOGS_DIR = VAULT_DIR / "Logs"
 
-# Ensure directories exist
-NEEDS_ACTION.mkdir(exist_ok=True)
-PENDING_APPROVAL.mkdir(exist_ok=True)
-DONE.mkdir(exist_ok=True)
-LOGS_DIR.mkdir(exist_ok=True)
+# Ensure directories exist (create parents if needed)
+VAULT_DIR.mkdir(parents=True, exist_ok=True)
+NEEDS_ACTION.mkdir(parents=True, exist_ok=True)
+PENDING_APPROVAL.mkdir(parents=True, exist_ok=True)
+DONE.mkdir(parents=True, exist_ok=True)
+LOGS_DIR.mkdir(parents=True, exist_ok=True)
+(NEEDS_ACTION / "email").mkdir(parents=True, exist_ok=True)
+(NEEDS_ACTION / "general").mkdir(parents=True, exist_ok=True)
+(NEEDS_ACTION / "social").mkdir(parents=True, exist_ok=True)
+(VAULT_DIR / "Signals").mkdir(parents=True, exist_ok=True)
 
 
 class DashboardHandler(SimpleHTTPRequestHandler):
